@@ -1,0 +1,246 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基本スタイル */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    /* border-radius: 15px; */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ヘッダー */
+header {
+    background: #4facfe;
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 40px 30px;
+}
+
+/* 2カラムレイアウト */
+.two-column-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.input-section {
+    margin-bottom: 0;
+}
+
+.output-section {
+    text-align: center;
+}
+
+.input-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1.1em;
+}
+
+#text-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    /* border-radius: 10px; */
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.3s ease;
+}
+
+#text-input:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+#text-input::placeholder {
+    color: #aaa;
+    white-space: pre-line;
+}
+
+/* ボタンスタイル */
+.btn-primary,
+.btn-secondary {
+    padding: 15px 30px;
+    border: none;
+    /* border-radius: 50px; */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+    /* width: 100%; */
+}
+
+/* .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+} */
+
+.btn-secondary {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(17, 153, 142, 0.4);
+}
+
+.button-container {
+    text-align: center;
+}
+
+/* QRコード表示エリア */
+.output-section {
+    text-align: center;
+}
+
+.qr-container {
+    /* background: #f8f9fa; */
+    /* border-radius: 15px; */
+    padding: 5px;
+    margin-bottom: 20px;
+    min-height: 350px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e1e5e9;
+    transition: opacity 0.3s ease;
+}
+
+.placeholder {
+    color: #999;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#qr-canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    /* モバイルでは1カラムレイアウトに変更 */
+    .two-column-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left-column,
+    .right-column {
+        min-width: unset;
+    }
+
+    .qr-container {
+        padding: 20px;
+        min-height: 250px;
+        max-width: 100%;
+    }
+}
+
+/* ローディングアニメーション */
+.loading {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4facfe;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

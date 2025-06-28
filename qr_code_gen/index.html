@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRコードジェネレーター</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QRコードジェネレーター</h1>
+        </header>
+
+        <main>
+            <div class="two-column-layout">
+                <div class="left-column">
+                    <div class="input-section">
+                        <label for="text-input">QRコードに変換するテキスト:</label>
+                        <textarea 
+                            id="text-input" 
+                            placeholder="ここにテキストを入力してください...&#10;複数行に対応しています"
+                            rows="12"
+                        ></textarea>
+                        
+                        <div class="button-container">
+                        <button id="generate-btn" class="btn-primary">
+                            手動でQRコードを生成
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <div class="output-section">
+                        <div id="qr-container" class="qr-container">
+                            <canvas id="qr-canvas" style="display: none;"></canvas>
+                            <div id="placeholder" class="placeholder">
+                                <p>左のテキストエリアに内容を入力すると<br>リアルタイムでQRコードが生成されます</p>
+                            </div>
+                        </div>
+                        
+                        <button id="download-btn" class="btn-primary" style="display: none;">
+                            画像をダウンロード
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>QRコードは株式会社デンソーウェーブの登録商標です</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- QRコード生成ライブラリをローカルから読み込み -->
+    <script src="qrcode.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
