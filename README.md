@@ -17,5 +17,12 @@ https://www.denso-wave.com/ja/adcd/support/faq/trademark/
 
 ## 使い方
 
-zipファイルをダウンロードして、解凍してください。
+zipファイルをダウンロードして、解凍してください。<br>
 index.htmlをブラウザで開くとQRコード生成画面が表示されます。
+
+## ブログ記事
+
+作った経緯とかを書きました
+
+https://dev.classmethod.jp/articles/had-ai-create-qr-code-generator-app/
+
