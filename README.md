@@ -1,0 +1,2 @@
+# QRCodeGenerator
+文字列からリアルタイムにQRコードを生成します
