@@ -14,3 +14,8 @@ https://www.denso-wave.com/ja/adcd/support/faq/trademark/
 こちらのライブラリを使用させていただきました。ありがとうございます。
 
 [qrcodejs](https://github.com/davidshimjs/qrcodejs)
+
+## 使い方
+
+zipファイルをダウンロードして、解凍してください。
+index.htmlをブラウザで開くとQRコード生成画面が表示されます。
